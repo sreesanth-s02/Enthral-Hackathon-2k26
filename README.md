@@ -51,7 +51,7 @@ SOS emergency alert feature
 Integration with government disaster systems
 ⚙️ How to Run the Project
 Clone the repository
-git clone https://github.com/your-username/your-repo-name.git
+git clone https://github.com/sreesanth-s02/Enthral-Hackathon-2k26
 Open the project folder
 Add your Firebase configuration in firebase.js
 Run using Live Server (VS Code recommended)
