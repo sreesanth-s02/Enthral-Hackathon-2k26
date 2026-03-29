@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+
+<title>Report Disaster</title>
+
+<link rel="stylesheet" href="app.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+
+</head>
+
+<body>
+
+<h2>🚨 Report Disaster</h2>
+
+<form id="reportForm">
+
+<select id="type">
+<option value="Flood">Flood</option>
+<option value="Fire">Fire</option>
+<option value="Earthquake">Earthquake</option>
+<option value="Landslide">Landslide</option>
+</select>
+
+<input type="text" id="description" placeholder="Enter description" required>
+
+<select id="severity">
+<option value="Low">Low</option>
+<option value="Medium">Medium</option>
+<option value="High">High</option>
+</select>
+
+<button type="submit">Submit Report</button>
+
+</form>
+<p>📍 Click on the map to mark the disaster location</p>
+<div id="map"></div>
+
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+
+<script src="firebase.js"></script>
+
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+<script src="report.js"></script>
+
+</body>
+</html>

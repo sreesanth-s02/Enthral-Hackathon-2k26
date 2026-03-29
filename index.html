@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+
+<title>Disaster Response Platform</title>
+
+<link rel="stylesheet" href="app.css">
+
+</head>
+
+<body>
+
+<div class="hero">
+
+<h1>🚨 Disaster Response Platform</h1>
+
+<p class="tagline">
+Real-time disaster reporting and monitoring system connecting citizens with emergency volunteers.
+</p>
+
+<div class="hero-buttons">
+
+<button onclick="location.href='user-report.html'">
+Report Disaster
+</button>
+
+<button onclick="location.href='admin-login.html'">
+Volunteer / Admin Login
+</button>
+
+</div>
+
+</div>
+
+<div class="features">
+
+<div class="card">
+<h3>📍 Real-time Reporting</h3>
+<p>Citizens can instantly report disasters with location on the map.</p>
+</div>
+
+<div class="card">
+<h3>🗺 Live Monitoring</h3>
+<p>Volunteers track disasters in real-time using an interactive map dashboard.</p>
+</div>
+
+<div class="card">
+<h3>🔥 Disaster Heatmap</h3>
+<p>Identify high-risk zones using visual heatmap analytics.</p>
+</div>
+
+<div class="card">
+<h3>⚡ Fast Response</h3>
+<p>Emergency teams can prioritize severe disasters immediately.</p>
+</div>
+
+</div>
+
+<div class="stats">
+
+<div class="stat-card">
+<h2 id="reportCount">--</h2>
+<p>Total Reports</p>
+</div>
+
+<div class="stat-card">
+<h2>24/7</h2>
+<p>Monitoring</p>
+</div>
+
+<div class="stat-card">
+<h2>Live</h2>
+<p>Disaster Tracking</p>
+</div>
+
+</div>
+
+<footer>
+
+<p>© 2026 Disaster Response Platform | Hackathon Project</p>
+
+</footer>
+
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+
+<script src="firebase.js"></script>
+
+<script>
+
+db.collection("reports").get().then((snapshot)=>{
+document.getElementById("reportCount").innerText = snapshot.size;
+});
+
+</script>
+
+</body>
+</html>
